@@ -1,0 +1,9 @@
+<div class="container text-center" id="question-one">
+    <h2 class="mb-4">Q1. Which of the following option leads to the portability and security of Java?</h2>
+    <h4 class="mb-4" >
+        <input type="radio" name="question-one-radio" value="Bytecode is executed by JVM" (change)="onAnswerOneChange($event.target.value)" > <span class="checkmark"></span><label class="options">Bytecode is executed by JVM</label> <br>
+        <input type="radio" name="question-one-radio" value="Use of exception handling" (change)="onAnswerOneChange($event.target.value)" > <span class="checkmark"></span><label class="options">Use of exception handling</label> <br>
+        <input type="radio" name="question-one-radio" value="Dynamic binding between objects" (change)="onAnswerOneChange($event.target.value)" > <span class="checkmark" ></span><label class="options">Dynamic binding between objects</label> <br>
+    </h4>
+    <a (click)="navigateToQuestionTwo()" class="btn btn-xl btn-success">Next</a>
+</div>

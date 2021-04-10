@@ -1,0 +1,10 @@
+<div class="container text-center">
+    <h2 class="mb-4">Q4. What is the return type of the hashCode() method in the Object class?</h2>
+    <h4 class="mb-4" >
+        <input type="radio" name="question-four-radio" value="Object" (change)="onAnswerFourChange($event.target.value)" > <span class="checkmark"></span><label class="options">Object</label> <br>
+        <input type="radio" name="question-four-radio" value="int" (change)="onAnswerFourChange($event.target.value)" > <span class="checkmark"></span><label class="options">int</label> <br>
+        <input type="radio" name="question-four-radio" value="void" (change)="onAnswerFourChange($event.target.value)" > <span class="checkmark" ></span><label class="options">void</label> <br>
+    </h4>
+    <a routerLink="/question-three" class="btn btn-xl btn-light mr-4">Previous</a>&nbsp;
+    <a (click)="navigateToQuestionFour()" class="btn btn-xl btn-success">Next</a>
+</div>

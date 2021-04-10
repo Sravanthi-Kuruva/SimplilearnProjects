@@ -1,0 +1,10 @@
+<div class="container text-center">
+    <h2 class="mb-4">Q2. Which of the following is not a Java features?</h2>
+    <h4 class="mb-4" >
+        <input type="radio" name="question-two-radio" value="Dynamic" (change)="onAnswerTwoChange($event.target.value)" > <span class="checkmark"></span><label class="options">Dynamic</label> <br>
+        <input type="radio" name="question-two-radio" value="Architecture Neutral" (change)="onAnswerTwoChange($event.target.value)" > <span class="checkmark"></span><label class="options">Architecture Neutral</label> <br>
+        <input type="radio" name="question-two-radio" value="Use of pointers" (change)="onAnswerTwoChange($event.target.value)" > <span class="checkmark" ></span><label class="options">Use of pointers</label> <br>
+    </h4>
+    <a routerLink="/question-one" class="btn btn-xl btn-light mr-4">Previous</a>&nbsp;
+    <a (click)="navigateToQuestionThree()" class="btn btn-xl btn-success">Next</a>
+</div>

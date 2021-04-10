@@ -1,0 +1,10 @@
+<div class="container text-center">
+    <h2 class="mb-4">Q3. What is used to find and fix bugs in the Java programs?</h2>
+    <h4 class="mb-4" >
+        <input type="radio" name="question-three-radio" value="JDB" (change)="onAnswerThreeChange($event.target.value)" > <span class="checkmark"></span><label class="options">JDB</label> <br>
+        <input type="radio" name="question-three-radio" value="JVM" (change)="onAnswerThreeChange($event.target.value)" > <span class="checkmark"></span><label class="options">JVM</label> <br>
+        <input type="radio" name="question-three-radio" value="JRE" (change)="onAnswerThreeChange($event.target.value)" > <span class="checkmark" ></span><label class="options">JRE</label> <br>
+    </h4>
+    <a routerLink="/question-two" class="btn btn-xl btn-light mr-4">Previous</a>&nbsp;
+    <a (click)="navigateToQuestionFour()" class="btn btn-xl btn-success">Next</a>
+</div>

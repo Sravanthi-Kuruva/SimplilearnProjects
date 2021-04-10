@@ -1,0 +1,10 @@
+<div class="container text-center">
+    <h2 class="mb-4">Q5. What does the expression float a = 35 / 0 return?</h2>
+    <h4 class="mb-4" >
+        <input type="radio" name="question-five-radio" value="0" (change)="onAnswerFiveChange($event.target.value)" > <span class="checkmark"></span><label class="options">0</label> <br>
+        <input type="radio" name="question-five-radio" value="Not a Number" (change)="onAnswerFiveChange($event.target.value)" > <span class="checkmark"></span><label class="options">Not a Number</label> <br>
+        <input type="radio" name="question-five-radio" value="Infinity" (change)="onAnswerFiveChange($event.target.value)" > <span class="checkmark" ></span><label class="options">Infinity</label> <br>
+    </h4>
+    <a routerLink="/question-four" class="btn btn-xl btn-light mr-4">Previous</a>&nbsp;
+    <a (click)="navigateToResultPage()" class="btn btn-xl btn-success">Submit</a>
+</div>

@@ -1,0 +1,20 @@
+<body id="page-top">
+    <!-- Header -->
+    <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+            <h1 class="mb-1">Online Quiz Portal</h1>
+            <h3 class="mb-5">
+                <em>powered by simplilearn</em>
+            </h3>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" (click) = 'navigateToQuestionOne()'>Start</a>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <section class="content-section bg-primary text-white">
+        <router-outlet>
+            <!-- All Components will render here -->
+        </router-outlet>
+    </section>
+
+</body>
