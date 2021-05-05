@@ -1,0 +1,24 @@
+<div>
+    <div><h1 style="text-align: center;">Movies List</h1></div>
+    <div style="text-align: center;"><button class="btn btn-primary" (click)="addMovie()"> ADD MOVIE</button></div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-4 movieBox" *ngFor="let movie of moviesList">
+            <div class="movieDetail">
+                <p>{{ movie?.name }}</p>
+                <p>{{ movie?.duration}}</p>
+                <p>{{ movie?.language}}</p>
+                <p>{{ movie?.genre}}</p>
+                <img src={{movie?.banner}}  width="200" height="90" alt="banner" style="margin-bottom:5px ;" />
+                <div>
+                    <!-- Edit movie modal -->
+                    <button type="button" (click)="onClickEdit(movie.id)" class="btn btn-info">
+                        Edit movie
+                    </button>
+                    <button class="btn btn-danger" (click)="deleteMovie(movie.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

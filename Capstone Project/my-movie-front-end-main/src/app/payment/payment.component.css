@@ -1,0 +1,10 @@
+.payment-details{
+    align-self: center;
+    border: 1px solid green;
+    padding: 5px 10px;
+    margin: 50px 500px;
+    text-align:center;
+}
+.form_payment{
+    padding: 10px 0;
+}

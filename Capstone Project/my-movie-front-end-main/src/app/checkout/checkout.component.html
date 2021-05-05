@@ -1,0 +1,12 @@
+<div class="checkout-details">
+    <div class="banner">
+        <img src={{movieData?.banner}} width="400" height="200" alt="banner"/>
+    </div>
+    <div class="details"> 
+        <p class="para">Movie Name: {{movieData?.name}} </p>
+        <p class="para">Theater Name: {{theaterData?.theatreName}}</p>
+        <p class="para">Movie Duration: {{movieData?.duration}}</p>
+        <p class="para">Seat No: {{selectedSeats}}</p>
+        <p class="para">Total Price: {{selectedSeats?.length * price}}</p>
+    </div>
+</div>

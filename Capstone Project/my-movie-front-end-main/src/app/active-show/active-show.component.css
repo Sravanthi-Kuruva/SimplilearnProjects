@@ -1,0 +1,11 @@
+.movie_poster{
+    width: 100px;
+}
+.movieBox{
+    
+}
+.movieDetail{
+    border: 1px solid green;
+    margin: 10px 2px;
+    padding: 8px;
+}

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="choosenmovie">
+        <p>movie name: {{choosenMovie?.name}}</p>
+        <p>movie duration: {{choosenMovie?.duration}}</p>
+        <p>movie genre: {{choosenMovie?.genre}}</p>
+        <p>movie language: {{choosenMovie?.language}}</p>
+    </div>
+    <div class="chooseDiv">
+        <form [formGroup]="chooseForm" (ngSubmit)="choose()" class="form-group" class="chooseForm">
+            <div class="col">
+                <label>Choose theater:</label>
+                <select type="text" placeholder="theater" formControlName="theater" name="theater" class="form-control theater"
+                    (change)="setTheaterId()"
+                    [class.is-invalid]="chooseForm.get('theater').invalid && chooseForm.get('theater').touched ">
+                    <option selected value> -- select an option -- </option>
+                    <ng-container *ngFor="let option of theatersList">
+                        <option><div>{{option.id}}) {{ option.theatreName }}</div></option>
+                    </ng-container>
+                </select>
+            </div>
+            <div class="col">
+                <label>Choose date:</label>
+                <input class="form-control dateInput" type="date" formControlName="date" 
+                    [class.is-invalid]="chooseForm.get('date').invalid && chooseForm.get('date').touched ">
+            </div>
+            <div class="col">
+                <label>Choose time:</label>
+                <select type="text" placeholder="time" formControlName="time" name="time" class="form-control timeInput"
+                    [class.is-invalid]="chooseForm.get('time').invalid && chooseForm.get('time').touched ">
+                    <option selected value> -- select an option -- </option>
+                    <option>10:00 AM (Morning)</option>
+                    <option>01:00 PM (Matnee)</option>
+                    <option>04:00 PM (Evening)</option>
+                    <option>08:00 PM (Night)</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="submit" class="btn btn-success mr-3" placeholder="submit" [disabled]="!chooseForm.valid">
+            </div>
+        </form>
+    </div>
+</div>

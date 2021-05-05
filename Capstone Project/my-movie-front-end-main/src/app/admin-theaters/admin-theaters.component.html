@@ -1,0 +1,22 @@
+<div>
+    <div><h1 style="text-align: center;">theaters List</h1></div>
+    <div style="text-align: center;"><button class="btn btn-primary" (click)="addTheater()"> ADD theater</button></div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-4 theaterBox" *ngFor="let theater of theatersList">
+            <div class="theaterDetail">
+                <p>{{ theater?.theatreName }}</p>
+                <p>{{ theater?.theatreAddress}}</p>
+                <p>{{ theater?.movie?.name}}</p>
+                <div>
+                    <!-- Edit theater modal -->
+                    <button type="button" (click)="onClickEdit(theater.id)" class="btn btn-info">
+                        Edit theater
+                    </button>
+                    <button class="btn btn-danger" (click)="deletetheater(theater.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

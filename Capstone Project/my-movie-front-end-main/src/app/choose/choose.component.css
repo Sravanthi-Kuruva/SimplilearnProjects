@@ -1,0 +1,17 @@
+.chooseDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 15px;
+}
+.chooseForm{
+    border: 2px solid black;
+    padding: 35px 20px;
+}
+.dateInput{
+    width: 200px;
+}
+.timeInput{
+    width: 200px;
+}

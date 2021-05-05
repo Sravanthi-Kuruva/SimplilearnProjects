@@ -1,0 +1,12 @@
+<div class="payment-details">
+    <div class="form_payment">
+        <h4>Enter your Card details</h4><br/>
+        <form method="post" >
+            <p>Card Holder Name : <input type="text" name="name" placeholder="Enter Your Card Holder Name" maxlength="30" /></p>
+            <p>Card Number : <input type="text" id="cardNumber" placeholder="Enter Your Card Number" maxlength="16"/></p>
+            <p>Cvv : <input type="password" name="cvv" placeholder="Enter CVV" maxlength="3"/></p>
+            <p>Expiry Date : <input type="date" name="expiry_date" placeholder="Enter Your Expiry Date"/></p>
+            <button class="btn btn-success" type="submit" id="Continue" (click)="payment()">Continue </button>
+        </form>
+    </div>     
+</div>

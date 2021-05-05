@@ -1,0 +1,47 @@
+<div class="edit-container">
+    <div class="editBox">
+        <h1 style="text-align: center;">EDIT MOVIE</h1>
+        <form [formGroup]="editMovieForm" (ngSubmit)="editMovie()" class="form-group" class="input-grp" id="login">
+            <div class="form-group row">
+                <div class="col">
+                    <label class="small_label">Name</label>
+                    <input type="text" placeholder="{{editingdMovie?.name}}" formControlName="name" name="name"
+                        class="form-control" [ngModel]="editingdMovie?.name"
+                        [class.is-invalid]="editMovieForm.get('name').invalid && editMovieForm.get('name').touched ">
+                    <small [class.d-none]="editMovieForm.get('name').valid || editMovieForm.get('name').untouched "
+                        class="text-danger">name is requied</small>
+                </div>
+                <div class="col">
+                    <label class="small_label">duration</label>
+                    <input type="text" placeholder="{{editingdMovie?.duration}}" formControlName="duration"
+                        name="duration" class="form-control" [ngModel]="editingdMovie?.duration"
+                        [class.is-invalid]="editMovieForm.get('duration').invalid && editMovieForm.get('duration').touched ">
+                    <small
+                        [class.d-none]="editMovieForm.get('duration').valid || editMovieForm.get('duration').untouched"
+                        class="text-danger">duration is requied</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <label class="small_label">language</label>
+                    <input type="language" placeholder="{{editingdMovie?.language}}" formControlName="language"
+                        name="language" class="form-control" [ngModel]="editingdMovie?.language"
+                        [class.is-invalid]="editMovieForm.get('language').invalid && editMovieForm.get('language').touched ">
+                    <small
+                        [class.d-none]="editMovieForm.get('language').valid || editMovieForm.get('language').untouched "
+                        class="text-danger">language is requied</small>
+                </div>
+                <div class="col">
+                    <label class="small_label">genre</label>
+                    <input type="text" placeholder="{{editingdMovie?.genre}}" formControlName="genre" name="genre"
+                        class="form-control" [ngModel]="editingdMovie?.genre"
+                        [class.is-invalid]="editMovieForm.get('genre').invalid && editMovieForm.get('genre').touched ">
+                    <small [class.d-none]="editMovieForm.get('genre').valid || editMovieForm.get('genre').untouched"
+                        class="text-danger">genre is requied</small>
+                </div>
+            </div>
+            <hr>
+            <input type="submit" class="btn btn-success mr-3" placeholder="submit" [disabled]="!editMovieForm.valid">
+        </form>
+    </div>
+</div>

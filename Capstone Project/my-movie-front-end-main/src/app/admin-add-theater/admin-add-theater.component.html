@@ -1,0 +1,57 @@
+<div class="edit-container">
+    <div class="editBox">
+        <h1 style="text-align: center;">ADD THEATER</h1>
+        <form [formGroup]="addTheaterForm" (ngSubmit)="addTheater()" class="form-group" class="input-grp" id="login">
+            <div class="form-group row">
+                <div class="col">
+                    <label class="small_label">theatreName</label>
+                    <input type="text" placeholder="enter theatreName" formControlName="theatreName" name="theatreName"
+                        class="form-control"
+                        [class.is-invalid]="addTheaterForm.get('theatreName').invalid && addTheaterForm.get('theatreName').touched ">
+                    <small [class.d-none]="addTheaterForm.get('theatreName').valid || addTheaterForm.get('theatreName').untouched "
+                        class="text-danger">theatreName is requied</small>
+                </div>
+                <div class="col">
+                    <label class="small_label">theatreAddress</label>
+                    <input type="text" placeholder="enter theatreAddress" formControlName="theatreAddress"
+                        name="theatreAddress" class="form-control"
+                        [class.is-invalid]="addTheaterForm.get('theatreAddress').invalid && addTheaterForm.get('theatreAddress').touched ">
+                    <small
+                        [class.d-none]="addTheaterForm.get('theatreAddress').valid || addTheaterForm.get('theatreAddress').untouched"
+                        class="text-danger">theatreAddress is requied</small>
+                </div>
+            </div>
+            <div class="col">
+                <select type="text" placeholder="movieId" formControlName="movieId" name="movieId"
+                    class="form-control" (change)="setMovieId()"
+                    [class.is-invalid]="addTheaterForm.get('movieId').invalid && addTheaterForm.get('movieId').touched ">
+                    <option selected value> -- select an option -- </option>
+                    <ng-container *ngFor="let option of moviesList">
+                        <option><div>{{option.id}}) {{ option.name }}</div></option>
+                    </ng-container>
+                </select>
+            </div>
+            <!--<div class="form-group row">
+                <div class="col">
+                    <label class="small_label">language</label>
+                    <input type="language" placeholder="enter language" formControltheatreName="language"
+                        theatreName="language" class="form-control"
+                        [class.is-invalid]="addTheaterForm.get('language').invalid && addTheaterForm.get('language').touched ">
+                    <small
+                        [class.d-none]="addTheaterForm.get('language').valid || addTheaterForm.get('language').untouched "
+                        class="text-danger">language is requied</small>
+                </div>
+                <div class="col">
+                    <label class="small_label">genre</label>
+                    <input type="text" placeholder="enter genre" formControltheatreName="genre" theatreName="genre"
+                        class="form-control"
+                        [class.is-invalid]="addTheaterForm.get('genre').invalid && addTheaterForm.get('genre').touched ">
+                    <small [class.d-none]="addTheaterForm.get('genre').valid || addTheaterForm.get('genre').untouched"
+                        class="text-danger">genre is requied</small>
+                </div>
+            </div>-->
+            <hr>
+            <input type="submit" class="btn btn-success mr-3" placeholder="submit" [disabled]="!addTheaterForm.valid">
+        </form>
+    </div>
+</div>

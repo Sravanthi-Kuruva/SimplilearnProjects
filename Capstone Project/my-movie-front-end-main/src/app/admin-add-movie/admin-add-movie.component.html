@@ -1,0 +1,47 @@
+<div class="edit-container">
+    <div class="editBox">
+        <h1 style="text-align: center;">ADD MOVIE</h1>
+        <form [formGroup]="addMovieForm" (ngSubmit)="addMovie()" class="form-group" class="input-grp" id="login">
+            <div class="form-group row">
+                <div class="col">
+                    <label class="small_label">Name</label>
+                    <input type="text" placeholder="enter name" formControlName="name" name="name"
+                        class="form-control"
+                        [class.is-invalid]="addMovieForm.get('name').invalid && addMovieForm.get('name').touched ">
+                    <small [class.d-none]="addMovieForm.get('name').valid || addMovieForm.get('name').untouched "
+                        class="text-danger">name is requied</small>
+                </div>
+                <div class="col">
+                    <label class="small_label">duration</label>
+                    <input type="text" placeholder="enter duration" formControlName="duration"
+                        name="duration" class="form-control"
+                        [class.is-invalid]="addMovieForm.get('duration').invalid && addMovieForm.get('duration').touched ">
+                    <small
+                        [class.d-none]="addMovieForm.get('duration').valid || addMovieForm.get('duration').untouched"
+                        class="text-danger">duration is requied</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <label class="small_label">language</label>
+                    <input type="language" placeholder="enter language" formControlName="language"
+                        name="language" class="form-control"
+                        [class.is-invalid]="addMovieForm.get('language').invalid && addMovieForm.get('language').touched ">
+                    <small
+                        [class.d-none]="addMovieForm.get('language').valid || addMovieForm.get('language').untouched "
+                        class="text-danger">language is requied</small>
+                </div>
+                <div class="col">
+                    <label class="small_label">genre</label>
+                    <input type="text" placeholder="enter genre" formControlName="genre" name="genre"
+                        class="form-control"
+                        [class.is-invalid]="addMovieForm.get('genre').invalid && addMovieForm.get('genre').touched ">
+                    <small [class.d-none]="addMovieForm.get('genre').valid || addMovieForm.get('genre').untouched"
+                        class="text-danger">genre is requied</small>
+                </div>
+            </div>
+            <hr>
+            <input type="submit" class="btn btn-success mr-3" placeholder="submit" [disabled]="!addMovieForm.valid">
+        </form>
+    </div>
+</div>
